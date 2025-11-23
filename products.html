@@ -1,0 +1,340 @@
+ <!-- Satoria Somers// 2306905// Friday 12pm w/ Mrs. Badhika -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea La Vie Stitches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-top">
+		 <div class="header-left">
+    		<a href="index.html">
+
+        	<img src="Assets/logo.png" alt="Sea La Vie Logo" class="site-logo">
+   		 </a>
+	    </div>
+            <div class="header-center">
+                <a href="index.html" class="brand-link">
+                    <h1 class="brand-name">Sea la Vie Stitches</h1>
+                </a>
+            </div>
+            
+            <div class="header-right">
+                <!-- Account Dropdown -->
+                <div class="account-dropdown">
+                    <button class="icon-btn" id="accountBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="account-menu" id="accountMenu">
+                        <!-- Show when NOT logged in -->
+                        <div id="notLoggedIn">
+                            <a href="#" id="loginLink">Login</a>
+                            <a href="#" id="registerLink">Register</a>
+                        </div>
+                        <!-- Show when logged in -->
+                        <div id="loggedIn" style="display: none;">
+                            <span class="welcome-text">Hi, <span id="userName"></span>!</span>
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="cart.html" class="icon-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="header-nav">
+            <a href="index.html">Home</a>
+            
+            <div class="dropdown">
+                <a href="products.html" class="shop-link">Shop</a>
+                <button class="dropdown-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="products.html#bikinis">Bikinis</a>
+                    <a href="products.html#coverups">Cover Ups</a>
+                    <a href="products.html#onepieces">One Pieces</a>
+                </div>
+            </div>
+            
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+
+<div class="shop-header">
+        <h1 class="page-title">Our Collection</h1>
+        <p class="page-subtitle">Handcrafted crochet pieces for the beach</p>
+    </div>
+
+    <!-- Bikinis Section -->
+    <section id="bikinis" class="product-section">
+        <div class="section-divider">
+            <h2 class="section-title">Bikinis</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+<a href="prodbikini1.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/Bikini1.webp" alt="Bikini 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Ocean Breeze Bikini</h3>
+                    <p class="product-price">$4500.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 2 -->
+<a href="prodbikini2.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/Bikini2.webp" alt="Bikini 2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Sandy Shores Bikini</h3>
+                    <p class="product-price">$4800.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 3 -->
+<a href="prodbikini3.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/greenbikini.webp" alt="Bikini 3">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Sunset Bikini</h3>
+                    <p class="product-price">$5000.00</p>
+                </div>
+            </div>
+</a>
+</div>
+    </section>
+
+    <!-- Cover Ups Section -->
+    <section id="coverups" class="product-section">
+        <div class="section-divider">
+            <h2 class="section-title">Cover Ups</h2>
+            <div class="title-underline"></div>
+        </div>
+       
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+<a href="prodcover1.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/Cover up 1.jpg" alt="Cover Up 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Breezy Cover Dress</h3>
+                    <p class="product-price">$5500.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 2 -->
+<a href="prodcover2.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/blackcoverup.webp" alt="Cover Up 2">
+                 </div>
+                <div class="product-info">
+                    <h3 class="product-name">Rasta Cover</h3>
+                    <p class="product-price">$5800.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 3 -->
+<a href="prodcover3.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/greencoverup.webp" alt="Cover Up 3">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Beach Wrap</h3>
+                    <p class="product-price">$5200.00</p>
+                </div>
+            </div>
+</a>
+        </div>
+    </section>
+
+    <!-- One Pieces Section -->
+    <section id="onepieces" class="product-section">
+        <div class="section-divider">
+            <h2 class="section-title">One Pieces</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+<a href="prodpiece1.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/turqonepiece.webp" alt="One Piece 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Classic One Piece</h3>
+                    <p class="product-price">$6500.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 2 -->
+<a href="prodpiece2.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/whiteonepiece.webp" alt="One Piece 2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Breezy One Piece</h3>
+                    <p class="product-price">$6800.00</p>
+                </div>
+            </div>
+</a>
+            <!-- Product Card 3 -->
+<a href="prodpiece3.html" target="blank" class="product-link">
+            <div class="product-card-shop">
+                <div class="product-image">
+                    <img src="Assets/blueonepiece.webp" alt="One Piece 3">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Seaside One Piece</h3>
+                    <p class="product-price">$7000.00</p>
+                </div>
+            </div>
+</a>
+</div>
+</section>
+<!-- Login Modal -->
+    <div class="auth-modal" id="loginModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal('loginModal')">&times;</button>
+            <h2>Welcome Back</h2>
+            <p class="auth-subtitle">Login to your account</p>
+            
+            <form id="loginForm">
+                <div class="auth-form-group">
+                    <label for="loginUsername">Username or Email</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+            
+            <p class="auth-switch">
+                Don't have an account? 
+                <a href="#" onclick="switchToRegister()">Register here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="auth-modal" id="registerModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal('registerModal')">&times;</button>
+            <h2>Create Account</h2>
+            <p class="auth-subtitle">Join Sea la Vie Stitches</p>
+            
+            <form id="registerForm">
+                <div class="auth-form-group">
+                    <label for="regFullName">Full Name *</label>
+                    <input type="text" id="regFullName" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regDOB">Date of Birth *</label>
+                    <input type="date" id="regDOB" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regEmail">Email Address *</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regUsername">Username *</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regPassword">Password *</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regConfirmPassword">Confirm Password *</label>
+                    <input type="password" id="regConfirmPassword" required minlength="6">
+                </div>
+                
+                <button type="submit" class="auth-btn">Create Account</button>
+            </form>
+            
+            <p class="auth-switch">
+                Already have an account? 
+                <a href="#" onclick="switchToLogin()">Login here</a>
+            </p>
+        </div>
+    </div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-sections">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        
+        <!-- Shop -->
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <a href="products.html#bikinis">Bikinis</a>
+            <a href="products.html#coverups">Cover Ups</a>
+            <a href="products.html#onepieces">One Pieces</a>
+        </div>
+        
+        <!-- About -->
+        <div class="footer-section">
+            <h3>About</h3>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <!-- Connect -->
+    <div class="footer-connect">
+        <p>CONNECT</p>
+        <div class="social-icons">
+            <a href="contact.html"><i class="fab fa-tiktok"></i></a>
+            <a href="contact.html"><i class="fab fa-youtube"></i></a>
+            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+       <!-- Copyright -->
+    <p class="footer-copy">&copy; 2025 Sea la Vie Stitches</p>
+</footer>  
+
+  <script src="script.js"></script>
+
+</body>
+</html>

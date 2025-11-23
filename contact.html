@@ -1,0 +1,250 @@
+ <!-- Satoria Somers// 2306905// Friday 12pm w/ Mrs. Badhika -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea La Vie Stitches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	
+    <header class="main-header">
+        <div class="header-top">
+  <div class="header-left">
+    		<a href="index.html">
+        	<img src="Assets/logo.png" alt="Sea La Vie Logo" class="site-logo">
+   		 </a>
+	    </div>                       
+            <div class="header-center">
+		<a href="index.html" class="brand-link">
+                <h1 class="brand-name">Sea la Vie Stitches</h1>
+		</a>
+            </div>
+            
+            <div class="header-right">
+                <!-- Account Dropdown -->
+                <div class="account-dropdown">
+                    <button class="icon-btn" id="accountBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="account-menu" id="accountMenu">
+                        <!-- Show when NOT logged in -->
+                        <div id="notLoggedIn">
+                            <a href="#" id="loginLink">Login</a>
+                            <a href="#" id="registerLink">Register</a>
+                        </div>
+                        <!-- Show when logged in -->
+                        <div id="loggedIn" style="display: none;">
+                            <span class="welcome-text">Hi, <span id="userName"></span>!</span>
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="cart.html" class="icon-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div><nav class="header-nav">
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+    <a href="products.html" class="shop-link">Shop</a>
+    <button class="dropdown-toggle">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a href="products.html#bikinis">Bikinis</a>
+        <a href="products.html#coverups">Cover Ups</a>
+        <a href="products.html#onepieces">One Pieces</a>
+    </div>
+</div>
+    <a href="about.html">Our Story</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+    </header>
+ <div class="contact-page">
+        <div class="contact-container">
+            <!-- Left Side - Contact Info -->
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <p>Not sure what you need? The team at Sea la Vie Stitches will be happy to listen to you and suggest pieces you hadn't considered.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email Address</h3>
+                            <p>sealaviestitches@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Support</h3>
+                            <p>(876) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Contact Form -->
+            <div class="contact-form-box">
+                <h2>We'd love to hear from you!</h2>
+                <p class="form-subtitle">Let's get in touch</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <!-- Login Modal -->
+    <div class="auth-modal" id="loginModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal('loginModal')">&times;</button>
+            <h2>Welcome Back</h2>
+            <p class="auth-subtitle">Login to your account</p>
+            
+            <form id="loginForm">
+                <div class="auth-form-group">
+                    <label for="loginUsername">Username or Email</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+            
+            <p class="auth-switch">
+                Don't have an account? 
+                <a href="#" onclick="switchToRegister()">Register here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="auth-modal" id="registerModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal('registerModal')">&times;</button>
+            <h2>Create Account</h2>
+            <p class="auth-subtitle">Join Sea la Vie Stitches</p>
+            
+            <form id="registerForm">
+                <div class="auth-form-group">
+                    <label for="regFullName">Full Name *</label>
+                    <input type="text" id="regFullName" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regDOB">Date of Birth *</label>
+                    <input type="date" id="regDOB" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regEmail">Email Address *</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regUsername">Username *</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regPassword">Password *</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                </div>
+                
+                <div class="auth-form-group">
+                    <label for="regConfirmPassword">Confirm Password *</label>
+                    <input type="password" id="regConfirmPassword" required minlength="6">
+                </div>
+                
+                <button type="submit" class="auth-btn">Create Account</button>
+            </form>
+            
+            <p class="auth-switch">
+                Already have an account? 
+                <a href="#" onclick="switchToLogin()">Login here</a>
+            </p>
+        </div>
+    </div>
+
+
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-sections">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        
+        <!-- Shop -->
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <a href="products.html#bikinis">Bikinis</a>
+            <a href="products.html#coverups">Cover Ups</a>
+            <a href="products.html#onepieces">One Pieces</a>
+        </div>
+        
+        <!-- About -->
+        <div class="footer-section">
+            <h3>About</h3>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <!-- Connect -->
+    <div class="footer-connect">
+        <p>CONNECT</p>
+        <div class="social-icons">
+            <a href="contact.html"><i class="fab fa-tiktok"></i></a>
+            <a href="contact.html"><i class="fab fa-youtube"></i></a>
+            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+    
+    <!-- Copyright -->
+    <p class="footer-copy">&copy; 2025 Sea la Vie Stitches</p>
+</footer>  
+
+<script src="script.js"></script>
+</body>
+</html>

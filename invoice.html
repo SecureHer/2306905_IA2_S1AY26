@@ -1,0 +1,102 @@
+ <!-- Satoria Somers// 2306905// Friday 12pm w/ Mrs. Badhika -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea La Vie Stitches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="invoice-container">
+        <!-- Invoice Header -->
+        <div class="invoice-header">
+            <div class="company-info">
+                <h1>Sea la Vie Stitches</h1>
+                <p>Handmade Beachwear</p>
+                <p>www.sealaviestitches.com</p>
+            </div>
+            <div class="invoice-details">
+                <h2>INVOICE</h2>
+                <p><strong>Invoice #:</strong> <span id="invoiceNumber"></span></p>
+                <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+            </div>
+        </div>
+
+        <!-- Shipping Information -->
+        <div class="info-section">
+            <div class="info-box">
+                <h3>Ship To:</h3>
+                <p id="customerName"></p>
+                <p id="customerEmail"></p>
+                <p id="customerPhone"></p>
+            </div>
+            <div class="info-box">
+                <h3>Shipping Address:</h3>
+                <p id="shippingAddress"></p>
+                <p id="shippingCity"></p>
+                <p id="shippingCountry"></p>
+            </div>
+        </div>
+
+        <!-- Items Table -->
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Size</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceItems">
+                <!-- Items will be populated by JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Totals Section -->
+        <div class="totals-section">
+            <div class="total-row subtotal">
+                <span>Subtotal:</span>
+                <span id="invoiceSubtotal">$0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Discount:</span>
+                <span id="invoiceDiscount">$0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Tax (10%):</span>
+                <span id="invoiceTax">$0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Shipping:</span>
+                <span id="invoiceShipping">FREE</span>
+            </div>
+            <div class="total-row final">
+                <span>Total:</span>
+                <span id="invoiceTotal">$0.00</span>
+            </div>
+        </div>
+
+        <!-- Print Button (Hidden when printing) -->
+        <div class="print-button no-print">
+            <button class="btn-print" onclick="window.print()">
+                <i class="fas fa-print"></i> Print Invoice
+            </button>
+            <button class="btn-back" onclick="window.location.href='index.html'">
+                <i class="fas fa-home"></i> Back to Home
+            </button>
+        </div>
+
+        <!-- Thank You Message -->
+        <div class="thank-you">
+            <p>Thank you for your purchase!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

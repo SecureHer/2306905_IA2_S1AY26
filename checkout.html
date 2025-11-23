@@ -1,0 +1,238 @@
+ <!-- Satoria Somers// 2306905// Friday 12pm w/ Mrs. Badhika -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Sea la Vie Stitches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-left">
+                <a href="index.html">
+                    <img src="Assets/logo.png" alt="Sea La Vie Logo" class="site-logo">
+                </a>
+            </div>
+            <div class="header-center">
+                <a href="index.html" class="brand-link">
+                    <h1 class="brand-name">Sea la Vie Stitches</h1>
+                </a>
+            </div>
+            <div class="header-right">
+                <!-- Account Dropdown -->
+                <div class="account-dropdown">
+                    <button class="icon-btn" id="accountBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="account-menu" id="accountMenu">
+                        <!-- Show when NOT logged in -->
+                        <div id="notLoggedIn">
+                            <a href="#" id="loginLink">Login</a>
+                            <a href="#" id="registerLink">Register</a>
+                        </div>
+                        <!-- Show when logged in -->
+                        <div id="loggedIn" style="display: none;">
+                            <span class="welcome-text">Hi, <span id="userName"></span>!</span>
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="cart.html" class="icon-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+
+<nav class="header-nav">
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+        <a href="products.html" class="shop-link">Shop</a>
+        <button class="dropdown-toggle">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+            <a href="products.html#bikinis">Bikinis</a>
+            <a href="products.html#coverups">Cover Ups</a>
+            <a href="products.html#onepieces">One Pieces</a>
+        </div>
+    </div>
+    
+    <a href="about.html">Our Story</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+        <h1 class="checkout-title">Checkout</h1>
+
+        <div class="checkout-grid">
+            <!-- Form - LEFT SIDE -->
+            <div class="shipping-form">
+                <form id="checkoutForm">
+                    <!-- Shipping Details -->
+                    <h2>Shipping Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">ZIP/Postal Code *</label>
+                            <input type="text" id="zipCode" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <input type="text" id="country" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details -->
+                    <h2 style="margin-top: 30px; margin-bottom: 20px;">Payment Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="cardName">Cardholder Name *</label>
+                        <input type="text" id="cardName" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date *</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-confirm">
+                            <i class="fas fa-check"></i> Confirm Order
+                        </button>
+                        <button type="button" class="btn btn-cancel" onclick="cancelCheckout()">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary - RIGHT SIDE -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="orderItems">
+                 
+                </div>
+                <div class="order-total">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="summarySubtotal">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Discount (2%):</span>
+                        <span id="summaryDiscount" style="color: #4CAF50;">-$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax (10%):</span>
+                        <span id="summaryTax">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping:</span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="total-row final">
+                        <span>Total:</span>
+                        <span id="summaryTotal">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-sections">
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        
+        <!-- Shop -->
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <a href="products.html#bikinis">Bikinis</a>
+            <a href="products.html#coverups">Cover Ups</a>
+            <a href="products.html#onepieces">One Pieces</a>
+        </div>
+        
+        <!-- About -->
+        <div class="footer-section">
+            <h3>About</h3>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <!-- Connect -->
+    <div class="footer-connect">
+        <p>CONNECT</p>
+        <div class="social-icons">
+            <a href="contact.html"><i class="fab fa-tiktok"></i></a>
+            <a href="contact.html"><i class="fab fa-youtube"></i></a>
+            <a href="contact.html"><i class="fab fa-instagram"></i></a>
+            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+    
+    <!-- Copyright -->
+    <p class="footer-copy">&copy; 2025 Sea la Vie Stitches</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
